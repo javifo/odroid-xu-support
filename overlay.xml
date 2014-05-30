@@ -2,10 +2,10 @@
 <layman>
     <overlay contact = "wabbit01@gmail.com"
             name = "odroid-xu-support"
-            src = "git://github.com/wabbit01/odroid-xu-files.git"
+            src = "git://github.com/wabbit01/odroid-xu-support.git"
             type = "git"
             status = "unofficial">
-        <link>https://github.com/wabbit01/odroid-xu-files/</link>
+        <link>https://github.com/wabbit01/odroid-xu-support/</link>
         <description>
             A Gentoo overlay with some ebuilds and config files for running Gentoo on Hardkernel's Odroid-xu board
         </description>
