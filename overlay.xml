@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layman>
+    <overlay contact = "wabbit01@gmail.com"
+            name = "Odroid-XU ebuilds and conf files"
+            src = "git://github.com/wabbit01/odroid-xu-files.git"
+            type = "git"
+            status = "unofficial">
+        <link>https://github.com/wabbit01/odroid-xu-files/</link>
+        <description>
+            A Gentoo overlay with some ebuilds and config files for running Gentoo on Hardkernel's Odroid-xu board
+        </description>
+    </overlay>
+</layman>
