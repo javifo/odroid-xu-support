@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <layman>
     <overlay contact = "wabbit01@gmail.com"
-            name = "Odroid-XU ebuilds and conf files"
+            name = "odroid-xu-support"
             src = "git://github.com/wabbit01/odroid-xu-files.git"
             type = "git"
             status = "unofficial">
