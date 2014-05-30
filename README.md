@@ -10,7 +10,6 @@ cat /etc/layman/layman.cfg.bkp | sed '/^overlays/a \            https://raw.gith
 ```
 And then add the overlay:
 ```bash
-layman -L
 layman -a odroid-xu-support
 ```
 
