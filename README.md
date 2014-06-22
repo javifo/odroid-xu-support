@@ -1,7 +1,8 @@
 odroid-xu-support
 ===============
 
-Ebuilds and config files for the odroid-xu board to run with Gentoo Linux.
+Ebuilds and config files for the odroid-xu board to run with Gentoo Linux. For a full guide on installing gentoo on a SD/eMMC, check odroid forums: http://forum.odroid.com/viewtopic.php?f=52&t=5065
+
 
 To add this overlay using layman, add this overlay to layman configuration:
 ```bash
