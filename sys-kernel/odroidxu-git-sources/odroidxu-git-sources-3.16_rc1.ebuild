@@ -21,7 +21,9 @@ DESCRIPTION="The very latest -git version of the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
 
-KEYWORDS="~arm ~arm64"
+# Failed to boot after a make exynos_defconfig
+#KEYWORDS="~arm ~arm64"
+KEYWORDS=""
 IUSE=""
 
 K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
