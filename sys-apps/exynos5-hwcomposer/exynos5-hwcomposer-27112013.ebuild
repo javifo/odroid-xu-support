@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/hardkernel/linux http://www.hardkernel.com"
 EGIT_REPO_URI="https://github.com/hardkernel/linux.git"
 EGIT_BRANCH="odroidxu-3.4.y"
 
-inherit git-2
+inherit git-2 eutils
 
 #LICENSE=""
 SLOT="0"
@@ -18,6 +18,12 @@ IUSE=""
 
 #DEPEND=""
 #RDEPEND="${DEPEND}"
+
+src_unpack() {
+    git-2_src_unpack
+    cd "${S}"
+    epatch "${FILESDIR}"/exynos5-hwcomposer-daemon.patch
+}
 
 src_prepare() {
     S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
@@ -30,16 +36,11 @@ src_prepare() {
 
 src_configure() {
     S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
-
 	econf
 }
 
 src_compile() {
     S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
-    
-	# The following allows emake to be used
-    #emake -j1 -C src auto/osdef.h objects
-
     emake
 }
 
