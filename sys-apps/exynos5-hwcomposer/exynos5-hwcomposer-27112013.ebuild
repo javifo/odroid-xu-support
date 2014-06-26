@@ -20,10 +20,8 @@ IUSE=""
 #RDEPEND="${DEPEND}"
 
 src_prepare() {
-    local exynoshw_src_path="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
+    S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
 	
-	S="${exynoshw_src_path}"
-
     if [[ ! -f "${S}"/configure ]] ; then
         # Sources don't exist!
         eerror "The exynos5 HW compositor sources were NOT found at ${S}!"
@@ -31,15 +29,27 @@ src_prepare() {
 }
 
 src_configure() {
-    local myconf
+    S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
 
 	econf
 }
 
 src_compile() {
-    # The following allows emake to be used
-    emake -j1 -C src auto/osdef.h objects
+    S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
+    
+	# The following allows emake to be used
+    #emake -j1 -C src auto/osdef.h objects
 
     emake
+}
+
+src_install() {
+    S="${WORKDIR}"/${P}/tools/hardkernel/exynos5-hwcomposer
+    
+	newinitd "${FILESDIR}"/exynos5-hwcomposer exynos5-hwcomposer
+
+    emake DESTDIR="${D}" install
+
+	dodoc README
 }
 
